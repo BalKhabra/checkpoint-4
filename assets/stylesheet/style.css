@@ -491,6 +491,9 @@ h1 {
   text-align: center;
   padding: 10px;
 }
+.values-text:hover {
+  color: white;
+}
 .values-text {
   font-size: 15px;
   line-height: 1.5;
@@ -502,6 +505,9 @@ h1 {
   font-size: 12px;
   color: #796D69;
   font-weight: lighter;
+}
+.values-read:hover {
+  color: white;
 }
 .text-box {
   background-color: rgba(255, 255, 255, 0.808);
@@ -515,6 +521,7 @@ h1 {
 }
 .text-box:hover {
   background-color: #ea5534e8;
+  color: white;
 }
 /* TESTMONIALS */
 .test-woman {
@@ -589,6 +596,30 @@ h1 {
   border-radius: 14px;
   width: 100%;
   padding: 10px;
+  position: relative;
+}
+
+.portfolio-squares:hover .img-popup  {
+  display: block;
+  width: 350px;
+  height: 80px;
+  padding: 20px 40px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.925);
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 20px;
+}
+.img-popup  {
+  display: none;
+}
+.card {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #CCCCCE;
+}
+.card-text {
+  color: #CCCCCE;
 }
 .portfolio {
   padding: 10px 40px;
@@ -606,31 +637,29 @@ h1 {
   height: 340px;
   padding: 10px;
 }
-.box-sm {
-  width: 100px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.836);
-}
-.smh-icons:hover {
-  position: absolute; 
+
+.team-smh:hover .smh-icons {
   display: block; 
-  overflow: hidden;
-  margin-top: -50px;
-  margin-left: 80px;
+  margin-top: -60px;
+  margin-left: 45px;
+  text-decoration: none;
+  color: white;
+}
+.smh-icons{
+  display: none; 
 }
 .smh-icons a {
   text-decoration: none;
-  color: #796D69;
+  color: white;
   margin: 10px;
 }
 .team-box {
-  width: 280px;
-  height: 80px;
+  width: 300px;
+  height: 380px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.137); 
+  margin: 10px;  
+  margin-top: 60px;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.137);   
-  margin: 10px;
-  margin-top: -30px;
-  position: relative;
 }
 /* PRICING */
 .pricing-box {
@@ -994,8 +1023,26 @@ small {
   color: white;
   background-color: #ee5639;
 }
+/* Button */
+.top-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #EA5434;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
 /* MOBILE VERSION */
 @media screen and (max-width: 768px) {
+  .container{
+    max-width: 720px;
+  }
   .flex {
     flex-wrap: wrap;
   }
@@ -1014,13 +1061,28 @@ small {
       align-items: center;
       flex-direction: row;
     }
-      /* Navigation Mobile */
+  /* Navigation Mobile */
   .nav-bar ul a {
     margin-left: 0;
     color: black;
   }
   .nav-bar {
     display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height:100vh;
+    background-color: #ee57398f;
+    padding-top: 12rem;
+    font-size: 30px;
+  }
+  .dropbtn {
+    color: black;
+  } 
+  .drop-down {
+    font-size: 30px;
   }
   #toggle:checked ~ .nav-bar {
     display: inline-block;
@@ -1029,12 +1091,16 @@ small {
     font-size: 24px;
     display: block;
   }
+  .column {
+    flex-direction: column;
+  }
   .background-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../media/hero-bg.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
+    width: 700px;
   }
   .choose-box {
     width: 100%;
@@ -1045,23 +1111,22 @@ small {
     font-size: 16px;
     margin-bottom: 60px;
   }
+  .header {
+    width: 700px;
+  }
   .article-choice {
-    margin: 40px;
+    width: 700px;
   }
   .white-box {
     width: 100%;
     margin: 20px 0;
   }
-  .get-started {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  }
   .box-logo {
-    margin-left: 265px;
+    margin-right: 80px;
+    text-align: center;
   }
   .about-article {
-    margin-right: 0;
+    width: 900px;
   }
   .container {
     padding: 10px 20px;
@@ -1084,24 +1149,50 @@ small {
   .values-img{
     width: 450px;
   }
+/* TEAM */
+.team-article {
+  width: 670px;
+}
+
+/* SERVICES */ 
+.services-article {
+ width: 700px;
+}
+/* VALUES */
+.values-article {
+  display: inline-block;
+  padding: 40px 120px;
+}
+/* CLIENT */
+.client-article {
+  display: inline-block;
+  padding: 100px 230px;
+}
 
   /* Testimony */
   .test-bg {
-    padding: 50px 50px;
+    width: 700px;
   }
   .test-text {
     font-size: 18px;
   }
-
-  /* FAQ */
-  .faq-box, .faq-sm  {
+/* FAQ */
+.faq-box, .faq-sm  {
     margin: 20px 0;
-    width: 700px;
+}
+.faq-box {
+  width: 600px;
+}
+.faq-sm {
+  width: 600px;
 }
 .faq-text {
-  font-size: 15px;
+  font-size: 13px;
 }
 /* PORTFOLIO */
+.portfolio {
+  width: 750px;
+}
 .footer-article {
   display: inline-block;
   padding: 40px 100px;
@@ -1126,5 +1217,9 @@ small {
   .bottom-numbers {
     margin-top: 30px;
     text-align: center;
+  }
+  /* FOOTER */
+  .footer {
+    display: block;
   }
 }
