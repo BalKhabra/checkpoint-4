@@ -342,16 +342,17 @@ h1 {
 }
 .about-img {
   width: 100%;
+  padding-right: 30px;
 }
-.play-circle {
+/* .play-circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #EA5434;
-  margin-top: -200px;
   margin-left: 145px;
+  padding-top: -100px;
   position: relative;
-}
+} */
 .about-text {
   font-size: 15px;
   color: #A59D9B;
@@ -454,7 +455,9 @@ h1 {
   background-color: white;
   border: 2px solid red;
 }
-
+.red-circle:hover .box-logo-white a {
+  color: red;
+}
 .service-box {
   width: 380px;
   height: 180px;
@@ -474,10 +477,6 @@ h1 {
 .box-logo-white a {
   color: white;
 }
-.box-logo-white a:hover {
-  color: red;
-}
-
 /* VALUES */
 .values-article  {
   padding: 40px;
@@ -491,9 +490,6 @@ h1 {
   text-align: center;
   padding: 10px;
 }
-.values-text:hover {
-  color: white;
-}
 .values-text {
   font-size: 15px;
   line-height: 1.5;
@@ -505,9 +501,6 @@ h1 {
   font-size: 12px;
   color: #796D69;
   font-weight: lighter;
-}
-.values-read:hover {
-  color: white;
 }
 .text-box {
   background-color: rgba(255, 255, 255, 0.808);
@@ -521,6 +514,12 @@ h1 {
 }
 .text-box:hover {
   background-color: #ea5534e8;
+  color: white;
+}
+.text-box:hover .values-read {
+  color: white;
+}
+.text-box:hover .values-text {
   color: white;
 }
 /* TESTMONIALS */
@@ -634,7 +633,7 @@ h1 {
 .team-img {
   border-radius: 8px;
   width: 300px;
-  height: 340px;
+  height: 320px;
   padding: 10px;
 }
 
@@ -655,7 +654,7 @@ h1 {
 }
 .team-box {
   width: 300px;
-  height: 380px;
+  height: 355px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.137); 
   margin: 10px;  
   margin-top: 60px;
@@ -1153,6 +1152,7 @@ small {
 .team-article {
   width: 670px;
 }
+
 
 /* SERVICES */ 
 .services-article {
